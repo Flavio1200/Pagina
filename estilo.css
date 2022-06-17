@@ -1,0 +1,329 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: 'Fraunces',serif;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.cabeza{
+    width: 100%;
+    padding: .5em;
+    height: 750px;
+    background-image: url(images/desktop/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.cont{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navegacion{
+    flex: .3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+.link{
+    font-size: 1.1em;
+    font-family: 'Barlow',sans-serif;
+    padding: .5em 1em;
+    border-radius: 20px;
+    transition: all .3s ease;
+}
+.menu{
+    display: none;
+}
+.act{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
+}
+.link:active, .link:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0,0,0);
+}
+.titulo{
+    text-align: center;
+    font-size: 4.2em;
+    margin-top: 5%;
+    color: rgb(255, 255, 255);
+}
+.flecha{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+}
+.imgcont{
+    width: 100%;
+    height: 100%;
+}
+.imgcont img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.grilla{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(300px, 1fr));
+}
+.texto{
+    padding: 8em;
+}
+.texto h3{
+    font-size: 3em;
+    margin-bottom: 1em;
+    color: rgb(35, 48, 62);
+}
+.texto p{
+    font-family: 'Barlow',sans-serif;
+    color: rgb(167, 171, 174);
+    margin-bottom: 2em;
+}
+.texto a{
+    font-size: 1.5em;
+    color: rgb(35, 48, 62);
+    position: relative;
+}
+.texto a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    opacity: 0.4;
+    z-index: -1;
+    border-radius: 20px;
+    background-color: brown;
+}
+.texto a:hover::before{
+    opacity: 1;
+}
+.imgcont{
+    position: relative;
+}
+.desc{
+    position: absolute;
+    text-align: center;
+    color: rgb(25, 83, 107);
+    padding: 0 9em;
+    top: 55%;
+    left: 0%;
+}
+.c1{
+    color: rgb(37, 86, 75);
+}
+.desc h3{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.desc p{
+    font-family: 'Barlow',sans-serif;
+}
+
+.partes:nth-child(2){
+    padding: 4em;
+}
+.partes:nth-child(2) .testimonios{
+    font-size: 1.6em;
+    text-align: center;
+    letter-spacing: 8px;
+    color: rgb(167, 171, 174);
+}
+.partes:nth-child(2) .flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75em;
+    margin-top: 4em;
+}
+.flex .it-flex{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+.flex .it-flex .avatar{
+    width: 75px;
+    height: 75px;
+    margin-bottom: 3em;
+    /* border-radius: 50%; */
+}
+.flex .it-flex .avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.flex .it-flex>p{
+    text-align: center;
+    font-family: 'Barlow',sans-serif;
+    color: rgb(90, 99, 108);
+}
+.flex .it-flex .persona{
+    text-align: center;
+    padding: 1em;
+}
+.flex .it-flex .persona .nombre{
+    font-size: 1.4em;
+    color: rgb(35, 48, 62);
+    margin-bottom: .5em;
+}
+.flex .it-flex .persona .cargo{
+    font-size: .75em;
+    color: rgb(167, 171, 174);
+}
+/* .partes:last-child{
+    height: 300px;
+} */
+.img-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.img-flex-item{
+    flex: 1;
+    flex-shrink: 1;
+    height: 100%;
+}
+.img-flex-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+footer{
+    background-color: rgb(52, 187, 160);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+.logo-footer{
+    text-align: center;
+    margin-bottom: 1em;
+}
+ul{
+    list-style-type: none;
+}
+.opciones, .social{
+    width: 100%;
+    text-align: center;
+    margin: 1em 0;
+}
+.opciones li, .social li{
+    display: inline-block;
+    margin: 0 1em;
+}
+.opciones li a, .social li a{
+    font-size: 1.2em;
+    color: rgb(69, 140, 126);
+    padding: .5em .75em;
+}
+.movil{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .texto{
+        padding: .5em;
+    }
+    .texto h3{
+        font-size: 1.6em;
+    }
+    .texto a{
+        font-size: 1em;
+    }
+    .desc{
+        padding: 0 1em;
+    }
+    .desc h3{
+        font-size: 1.5em;
+        margin-bottom: .5em;
+    }
+    .cabeza{
+        width: 100%;
+        padding: .5em;
+        height: 650px;
+        background-image: url(images/desktop/image-header.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+}
+@media (max-width: 375px){
+    .navegacion{
+        flex: 1;
+        position: absolute;
+        top: 15%;
+        left: calc(12.5%);
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        padding: 1em 0;
+        z-index: 100;
+    }
+    .link{
+        width: 50%; 
+        margin: .75em .25em;
+        text-align: center;
+        color: rgb(90, 99, 108);
+    }
+    .link:active, .link:hover{
+        background-color: rgb(250, 212, 0);
+        color: rgb(0,0,0);
+    }
+    .act{
+        background-color: rgb(250, 212, 0);
+        color: #000;
+    }
+
+
+    .menu{display: block; font-size: 1.5em; color: rgb(255, 255, 255);}
+    .desktop{display: none;}
+    .movil{display: block;}
+    .grilla{
+        width: 100%;
+        grid-template-columns: repeat(1,minmax(275px,1fr));
+    }
+    .texto{
+        padding: 1.5em 2em;
+        text-align: center;
+    }
+    .texto h3{
+        font-size: 1.8em;
+    }
+    .texto a{
+        font-size: 1.3em;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .img-flex{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .aparece{
+        opacity: 0;
+        transform: translate(150%, -100%) scale(0);
+        transition: all .5s linear;
+    }
+}
